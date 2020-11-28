@@ -5,13 +5,13 @@ $(document).ready(
       function () {
         prevImage()
       }
-    )
+    );
 
     $(".next").click(
       function () {
         nextImage()
       }
-    )
+    );
 
     $(document).keydown(
       function() {
@@ -21,7 +21,18 @@ $(document).ready(
           nextImage();
         }
       }
-    )
+    );
+
+    $(".nav i").click(
+      function() {
+        $(".nav i.active").removeClass("active");
+        $(this).addClass("active");
+        var circleIndex = $(this).index();
+
+        $(".images > img.active").removeClass("active");
+        $(".images > img").eq(circleIndex).addClass("active");
+      }
+    );
 
   }
 );
