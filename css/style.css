@@ -23,6 +23,9 @@
 .slider-wrapper .images img {
     display: none;
     height: 100%;
+    width: 90%;
+    object-fit: cover;
+    object-position: center;
 }
 .slider-wrapper .images img.active {
     display: inline-block;
